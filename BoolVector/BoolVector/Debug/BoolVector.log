@@ -1,0 +1,5 @@
+﻿  bool_vector.cpp
+c:\users\okulo\documents\visual studio 2015\projects\boolvector\boolvector\bool_vector.cpp(33): warning C4018: '<': signed/unsigned mismatch
+  BoolVector.cpp
+  Generating Code...
+  BoolVector.vcxproj -> C:\Users\okulo\Documents\Visual Studio 2015\Projects\BoolVector\Debug\BoolVector.exe
