@@ -3,20 +3,20 @@
 #include <string>
 
 
-Receipt::Receipt()
+Receipt::Receipt():Doc()
 {
 	waterCost = 0;
 	electrisityCost = 0;
 	std::cout << "Recepit::Default constructor activated" << std::endl;
 }
-Receipt::Receipt(unsigned int waterCost, unsigned int electrisityCost, std::string name) {
+Receipt::Receipt(unsigned int waterCost, unsigned int electrisityCost, std::string name):Doc() {
 	this->waterCost = waterCost;
 	this->electrisityCost = electrisityCost;
 	this->name = name;
 	std::cout << "Receipt::constructor with parametrs activated"
 		<< std::endl;
 }
-Receipt::Receipt(const Receipt &receipt) {
+Receipt::Receipt(const Receipt &receipt):Doc(receipt) {
 	this->waterCost = receipt.waterCost;
 	this->electrisityCost = receipt.electrisityCost;
 	this->name = receipt.name;
@@ -43,6 +43,7 @@ void Receipt::setName(std::string name) {
 }
 
 void Receipt::printOnScreen() {
+	std::cout << "================================" << std::endl;
 	std::cout <<"electrisityCost:"<<electrisityCost
 		<<"waterCost:"<<waterCost<<"adres:" << name<< std::endl;
 }

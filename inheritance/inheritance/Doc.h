@@ -8,22 +8,23 @@ class Doc
 
 public:
 	Doc();
-	Doc(string name, string information);
+	Doc(Date createDate,string name, string information);
 	Doc(const Doc &doc);
 
-	 std::string Doc::getName();
-	 std::string Doc::getInformation();
+	virtual std::string getName();
+	 std::string getInformation();
+	 Date getDate();
 
-	void setName(std::string name);
+	virtual void setName(std::string name);
 	void setInfo(std::string informaition);
-
-	void printOnScreen();
+	void setDate(Date date);
+	virtual void printOnScreen();
 	
 	
 	~Doc();
 private:
 	std::string name;
 	std::string information;
-	
+	Date createDate;
 };
 

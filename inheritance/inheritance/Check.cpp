@@ -2,18 +2,18 @@
 #include<iostream>
 
 
-Check::Check()
+Check::Check():Doc()
 {
 	std::cout << "Check::Default constructor activated" << std::endl;
 }
-Check::Check(unsigned short time, unsigned int countOfPurchases, unsigned int cost) {
-	this->time = time;
+Check::Check( unsigned int countOfPurchases, unsigned int cost):Doc() {
+
 	this->countOfPurchases = countOfPurchases;
 	this->cost = cost;
 	std::cout << "Check::constructor with parametrs activated" << std::endl;
 }
-Check::Check(const Check &check) {
-	this->time = check.time;
+Check::Check(const Check &check):Doc(check) {
+	
 	this->countOfPurchases = check.countOfPurchases;
 	this->cost = check.cost;
 	std::cout << "Check::copy constuctor activated" << std::endl;
@@ -24,9 +24,7 @@ unsigned int Check::getCost() {
 unsigned int Check::getCountOfPurchases() {
 	return countOfPurchases;
 }
-unsigned short Check::getTime() {
-	return time;
-}
+
 
 void Check::setCost(unsigned int cost) {
 	this->cost = cost;
@@ -34,13 +32,10 @@ void Check::setCost(unsigned int cost) {
 void Check::setCountOfPurchases(unsigned int countOfPurchases) {
 	this->countOfPurchases = countOfPurchases;
 }
-void Check::setTime(unsigned short time) {
-	this->time = time;
-}
 void Check::printOnScreen() {
+	std::cout << "================================" << std::endl;
 	std::cout << "cost:" << cost << "\n" <<
-		"countOfPurchases:" << countOfPurchases << "\n" <<
-		"time:" << time << std::endl;
+		"countOfPurchases:" << countOfPurchases << std::endl;
 }
 Check::~Check()
 {

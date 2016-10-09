@@ -11,8 +11,7 @@ public:
 
 	unsigned int getWaterCost();
 	unsigned int getElectrisityCost();
-	std::string
-		getName();
+	std::string getName();
 	void setWaterCost(unsigned int waterCost);
 	void setElectrisityCost(unsigned int electrisityCost);
 	void setName(std::string name);

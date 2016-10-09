@@ -3,21 +3,21 @@
 #include<string>
 
 
-Waybill::Waybill()
+Waybill::Waybill():Doc()
 {
 	weight = 0;
 	size = 0;
 	product = "";
 	std::cout << "Waybill::Default constructor activated" << std::endl;
 }
-Waybill::Waybill(unsigned int weight, unsigned int size, std::string product) {
+Waybill::Waybill(unsigned int weight, unsigned int size, std::string product):Doc() {
 	this->weight = weight;
 	this->size = size;
 	this->product = product;
 	std::cout << "Waybill::constructor with parametrs activated" 
 		<< std::endl;
 }
-Waybill::Waybill(const Waybill &waybill) {
+Waybill::Waybill(const Waybill &waybill):Doc(waybill) {
 	this->weight = waybill.weight;
 	this->size = waybill.size;
 	this->product =waybill.product;
@@ -46,6 +46,7 @@ void Waybill::setWeight(unsigned int weight) {
 }
 
 void Waybill::printOnScreen() {
+	std::cout << "================================" << std::endl;
 	std::cout << "productName:" << product <<" "<<"size:"
 		<<size<<" "<<"weight:"<<weight<<std::endl;
 }
