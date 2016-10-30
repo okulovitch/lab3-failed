@@ -5,8 +5,21 @@
 using namespace std;
 class Doc
 {
-
 public:
+	class Number {
+	private:
+		int value;
+	public:
+		Number(){
+		}
+		int getValue() {
+			return value;
+		}
+		void setValue(int value) {
+			this->value = value;
+		}
+
+	};
 	Doc();
 	Doc(Date createDate,string name, string information);
 	Doc(const Doc &doc);
@@ -22,7 +35,10 @@ public:
 	
 	
 	~Doc();
+
+
 private:
+	Number number;
 	std::string name;
 	std::string information;
 	Date createDate;

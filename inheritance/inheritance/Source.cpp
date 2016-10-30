@@ -12,7 +12,7 @@ using namespace std;
 
 int main() {
 
-	Doc doc2(Date{ 12,20,2016 }, "Boris","qwrytgg");
+	Doc doc2(Date{ 12,20,2016 }, "Boris","default information");
 	doc2.printOnScreen();
 
 
@@ -68,7 +68,12 @@ int main() {
 
 		cout << buff << endl; 
 	}
-	system("pause");
+
+
+	Doc::Number num;
+	num.setValue(15);
+	cout << "page of nested :=" <<num.getValue()<< endl;
+	
 	
 	return 0;
 	

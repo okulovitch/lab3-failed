@@ -49,6 +49,7 @@ void Doc::printOnScreen() {
 			  << "information:" << information << std::endl;
 }
 
+
 Doc::~Doc()
 {
 	std::cout << "Doc::destructor activated" << std::endl;

@@ -44,8 +44,8 @@ void Receipt::setName(std::string name) {
 
 void Receipt::printOnScreen() {
 	std::cout << "================================" << std::endl;
-	std::cout <<"electrisityCost:"<<electrisityCost
-		<<"waterCost:"<<waterCost<<"adres:" << name<< std::endl;
+	std::cout <<"electrisityCost:"<<electrisityCost<<" "
+		<<"waterCost:"<<waterCost<<" "<<"adress:" << name<< std::endl;
 }
 Receipt::~Receipt()
 {
